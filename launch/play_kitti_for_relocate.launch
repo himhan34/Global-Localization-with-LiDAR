@@ -1,7 +1,11 @@
 <launch>
+    <!-- play_kitti_for_relocate 노드를 실행하여 KITTI 데이터셋을 재생하고 재위치 추정 수행 -->
     <node name="play_kitti_for_relocate" pkg="lidar_100" type="play_kitti_for_relocate" output="screen"> 
+        <!-- KITTI 데이터셋의 폴더 경로를 설정함 -->
         <param name="dataset_folder" type="string" value="/media/spcomen21/WD5T/Dataset/kitti/sequences/" />
+        <!-- 재생할 시퀀스 번호를 설정함 -->
         <param name="seq_number" type="string" value="07" />
+        <!-- 데이터셋의 프레임 간 지연 시간을 설정함 (단위: 초) -->
         <param name="publish_delay" type="int" value="1" />
     </node>
 </launch>
